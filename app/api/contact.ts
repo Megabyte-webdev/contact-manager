@@ -12,12 +12,12 @@ export const getContactById = async (id: string) => {
   return response.data[0];
 };
 
-export const createContact = async (contact: ContactType) => {
+export const createContact = async (contact: Omit<ContactType, "id">) => {
   const response = await axios.post(`${API_URL}/contacts`, contact);
   return response.data;
 };
 
-export const updateContact = async (id: string, contact: ContactType) => {
+export const updateContact = async (id: string, contact: Omit<ContactType, "id">) => {
   const response = await axios.put(`${API_URL}/contacts/${id}`, contact);
   return response.data;
 };
