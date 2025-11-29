@@ -1,0 +1,36 @@
+{
+  "contacts": [
+    {
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "userId": "1",
+      "id": "1"
+    },
+    {
+      "name": "Megabyte",
+      "email": "megabytewebnew@gmail.com",
+      "userId": "1",
+      "id": "d9b1"
+    },
+    {
+      "id": "a6c9",
+      "name": "Paul-Odeli Joshua",
+      "email": "pauloodeli@gmail.com",
+      "userId": "2"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "User 1",
+      "email": "afolabimubarak18@gmail.com",
+      "password": "safeplace"
+    },
+    {
+      "id": "2",
+      "name": "User 2",
+      "email": "user2@gmail.com",
+      "password": "user"
+    }
+  ]
+}
