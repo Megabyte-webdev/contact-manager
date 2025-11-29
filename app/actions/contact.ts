@@ -35,8 +35,12 @@ export const updateContactAction = async (
   prevState: any,
   formData: FormData
 ) => {
-  const id = formData.get("id");
-  if (!id) return { error: "Contact id is required" };
+  const idEntry = formData.get("id");
+
+  if (!idEntry || typeof idEntry !== "string") {
+    return { error: "Contact id is required" };
+      }
+  const id = idEntry;
   const user = await getSession();
 
   const updatedContact: Omit<ContactType, "id"> = {
