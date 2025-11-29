@@ -14,7 +14,7 @@ export const createContactAction = async (
 
   const user = await getSession();
 
-  const newContact: ContactType = {
+  const newContact: Omit<ContactType, "id"> = {
     name: formData.get("name") as string,
     email: formData.get("email") as string,
     userId: user?.id,
@@ -39,7 +39,7 @@ export const updateContactAction = async (
   if (!id) return { error: "Contact id is required" };
   const user = await getSession();
 
-  const updatedContact: ContactType = {
+  const updatedContact: Omit<ContactType, "id"> = {
     name: formData.get("name") as string,
     email: formData.get("email") as string,
     userId: user?.id,
